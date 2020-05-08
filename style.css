@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(206,212,197);
+    background: linear-gradient(0deg, rgba(206,212,197,1) 80%, rgba(36,144,106,1) 80%);
+    padding: 30px 0;
+}
+
+.container {
+    height: 760px;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+}
