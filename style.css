@@ -16,3 +16,23 @@ body {
     margin: auto;
     background-color: white;
 }
+
+.clearfix {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+#chats {
+    float: left;
+    height: 100%;
+    width: 35%;
+    background-color: red;
+}
+
+#chat {
+    float: left;
+    height: 100%;
+    width: 65%;
+    background-color: blue;
+}
