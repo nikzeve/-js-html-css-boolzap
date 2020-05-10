@@ -6,7 +6,7 @@
 
 body {
     background: rgb(206,212,197);
-    background: linear-gradient(0deg, rgba(206,212,197,1) 80%, rgba(36,144,106,1) 80%);
+    background: linear-gradient(0deg, rgba(206,212,197,1) 85%, rgba(36,144,106,1) 85%);
     padding: 30px 0;
 }
 
@@ -23,16 +23,48 @@ body {
     display: table;
 }
 
-#chats {
+#left {
     float: left;
     height: 100%;
     width: 35%;
     background-color: red;
 }
 
-#chat {
+#right {
     float: left;
     height: 100%;
     width: 65%;
     background-color: blue;
+}
+
+#profile {
+    height: 60px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+#advice {
+    height: 70px;
+    width: 100%;
+    background-color: lightblue;
+}
+
+#search {
+    height: 40px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+#chats {
+    height: calc(100% - 170px);
+    width: 100%;
+    background-color: yellow;
+    overflow-y: scroll;
+}
+
+.single-chat {
+    height: 60px;
+    width: 100%;
+    background-color: green;
+    border-top: 1px solid #e4e4e4;
 }
