@@ -225,6 +225,7 @@ body {
     background-color: white;
     padding: 10px 30px 10px 10px;
     border-radius: 5%;
+    margin-bottom: 5px;
     position: relative;
 }
 
@@ -273,4 +274,8 @@ body {
     height: 40px;
     border: none;
     border-radius: 5px;
+}
+
+.template {
+    display: none;
 }
