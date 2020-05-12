@@ -1,14 +1,16 @@
 
-// $('#invia').click(function() {
-//     var nuovo_messaggio = $('#new_message').val();
-//     console.log(nuovo_messaggio);
-//
-//     var new_text = $('.template .message, .template .sent').clone();
-//
-//     new_text.text(nuovo_messaggio);
-//     $('#messagges-container').append(new_text);
-// });
 
+
+$('#search-icon').click(function() {
+    // alert('ciao');
+    var new_search = $('#search-users').val();
+    console.log(new_search);
+
+    $('.single-chat .chats-middle  .name').each(function() {
+        var name_chat = $(this).text();
+        console.log(name_chat);
+    });
+});
 
 
 $('#invia').click(invia_messaggio);
