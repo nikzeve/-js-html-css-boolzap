@@ -18,7 +18,7 @@ body {
     background-color: white;
 }
 
-.clearfix {
+.clearfix::after {
     content: '';
     clear: both;
     display: table;
@@ -234,7 +234,7 @@ body {
 }
 
 #middle {
-    height: 650px;
+    height: 640px;
     width: 100%;
     background-image: url(https://wallpaperstock.net/whatsapp-background_wallpapers_51439_1280x1024.jpg);
     background-size: cover;
@@ -242,7 +242,7 @@ body {
     /* padding: 10px 0; */
 }
 
-#messagges-container {
+#messages-container {
     width: 75%;
     height: 640px;
     margin: auto;
