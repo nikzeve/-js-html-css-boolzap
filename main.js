@@ -62,3 +62,11 @@ function messaggio_pc() {
 
     $('.m-container').append(nuovo_messaggio_pc);
 }
+
+$('#chats .single-chat').click(function() {
+
+    var nome_chat = $(this).find('.name').text();
+    console.log(nome_chat);
+
+    $('.messages-container[data-name-chat="' + nome_chat + '"]').addClass('active');
+})
