@@ -242,14 +242,24 @@ body {
     /* padding: 10px 0; */
 }
 
-#messages-container {
+.messages-container {
     width: 75%;
     height: 640px;
     margin: auto;
+    display: none;
+}
+
+.m-container {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 0;
+}
+
+.messages-container.active {
+    display: block;
 }
 
 .message {

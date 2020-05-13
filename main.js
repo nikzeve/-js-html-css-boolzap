@@ -46,7 +46,7 @@ function invia_messaggio() {
 
         new_text.text(nuovo_messaggio);
 
-        $('#messages-container').append(new_text);
+        $('.m-container').append(new_text);
 
         $('#new_message').val('');
 
@@ -60,5 +60,5 @@ function messaggio_pc() {
 
     nuovo_messaggio_pc.text('ok');
 
-    $('#messages-container').append(nuovo_messaggio_pc);
+    $('.m-container').append(nuovo_messaggio_pc);
 }
