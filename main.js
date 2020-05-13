@@ -46,7 +46,7 @@ function invia_messaggio() {
 
         new_text.text(nuovo_messaggio);
 
-        $('.m-container').append(new_text);
+        $('.active .m-container').append(new_text);
 
         $('#new_message').val('');
 
@@ -60,10 +60,11 @@ function messaggio_pc() {
 
     nuovo_messaggio_pc.text('ok');
 
-    $('.m-container').append(nuovo_messaggio_pc);
+    $('.active .m-container').append(nuovo_messaggio_pc);
 }
 
 $('#chats .single-chat').click(function() {
+    $('.messages-container').removeClass('active');
 
     var nome_chat = $(this).find('.name').text();
     console.log(nome_chat);
