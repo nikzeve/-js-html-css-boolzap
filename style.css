@@ -276,6 +276,10 @@ body {
     align-self: flex-end;
 }
 
+#delete-icon {
+    
+}
+
 .time-message {
     position: absolute;
     bottom: 0;
