@@ -1,18 +1,17 @@
 
 
 
-$('#search-icon').click(function() {
+$('#search-users').keyup(function() {
     // alert('ciao');
     var new_search = $('#search-users').val().trim().toLowerCase();
     console.log(new_search);
 
     if (new_search != '') {
 
-        $('.single-chat .chats-middle  .name').each(function() {
-            var name_chat = $(this).text().toLowerCase();
-            console.log(name_chat);
+        $('.single-chat').each(function() {
+            var name_chat = $(this).find('.name').text().toLowerCase();
 
-            if (new_search == name_chat) {
+            if (name_chat.includes (new_search)) {
                 console.log('Ecco la tua chat');
                 $(this).show();
             } else {
@@ -21,7 +20,7 @@ $('#search-icon').click(function() {
             }
         });
     } else {
-        $('single-chat .chats-middle  .name').show();
+        $('.single-chat').show();
     }
 });
 
