@@ -86,4 +86,19 @@ $(document).ready(function() {
 
     });
 
+    $('.messages-container').on('click', '.delete-icon', function(){
+
+    $(this).siblings('.dropdown').toggleClass('active z-index-100');
+    });
+
+    $('.messages-container').on('mouseleave', '.message', function() {
+
+        $('.dropdown.active').removeClass('active z-index-100');
+    });
+
+    $('.messages-container').on('click', '.message-destroy', function(){
+
+        $(this).closest('.message').remove();
+    });
+
 });
