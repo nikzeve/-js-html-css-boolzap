@@ -71,7 +71,7 @@ $(document).ready(function() {
 
         console.log(nome_chat);
 
-        var icon_chat = $(this).find('#icon[src]').text();
+        var icon_chat = $(this).find(' img').attr('src');
 
         console.log(icon_chat);
 
@@ -79,10 +79,10 @@ $(document).ready(function() {
         $('.messages-container[data-name-chat="' + nome_chat + '"]').addClass('active');
 
         $('#access-chat .access-name').text(nome_chat);
-        
+
         $('#access-chat .access-time').text('Ultimo accesso ieri alle 23:59');
 
-        $('#image-profile-chat[src]').text(icon_chat);
+        $('#image-profile-chat[src="' + icon_chat + '"]');
 
     });
 
