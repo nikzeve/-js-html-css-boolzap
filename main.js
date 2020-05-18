@@ -1,5 +1,4 @@
 
-$(document).ready(function() {
 
     $('#search-users').keyup(function() {
         // alert('ciao');
@@ -54,11 +53,15 @@ $(document).ready(function() {
 
             var template = Handlebars.compile(source);
 
-
+            var d = new Date();
+            var hours = d.getHours();
+            var minutes = d.getMinutes();
 
             var context = {
                 text_message: nuovo_messaggio,
-                class: 'sent'
+                class: 'sent',
+                hours: hours ,
+                minutes: minutes
             }
 
             console.log(context);
@@ -81,9 +84,15 @@ $(document).ready(function() {
 
         var template = Handlebars.compile(source);
 
+        var d = new Date();
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+
         var context = {
             text_message: 'ok',
-            class: 'received'
+            class: 'received',
+            hours: hours ,
+            minutes: minutes
         }
 
         console.log(context);
@@ -124,19 +133,18 @@ $(document).ready(function() {
 
     });
 
-    $('.messages-container').on('click', '.delete-icon', function(){
+    $('.m-container').on('click', '.delete-icon', function(){
 
-    $(this).siblings('.dropdown').toggleClass('active z-index-100');
+        console.log('funziona');
+    $('.dropdown').toggleClass('.active z-index-100');
     });
-
-    $('.messages-container').on('mouseleave', '.message', function() {
-
-        $('.dropdown.active').removeClass('active z-index-100');
-    });
-
-    $('.messages-container').on('click', '.message-destroy', function(){
-
-        $(this).closest('.message').remove();
-    });
-
-});
+    //
+    // $('.m-container').on('mouseleave', '.message', function() {
+    //
+    //     $('.dropdown.active').removeClass('.active z-index-100');
+    // });
+    //
+    // $('.m-container').on('click', '.message-destroy', function(){
+    //
+    //     $(this).closest('.message').remove();
+    // });
