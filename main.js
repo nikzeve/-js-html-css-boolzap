@@ -54,8 +54,11 @@ $(document).ready(function() {
 
             var template = Handlebars.compile(source);
 
+
+
             var context = {
-                text_message: nuovo_messaggio
+                text_message: nuovo_messaggio,
+                class: 'sent'
             }
 
             console.log(context);
@@ -74,11 +77,28 @@ $(document).ready(function() {
 
     function messaggio_pc() {
 
-        var nuovo_messaggio_pc = $('.template .message').clone();
+        var source = $("#entry-template").html();
 
-        nuovo_messaggio_pc.text('ok');
+        var template = Handlebars.compile(source);
 
-        $('.active .m-container').append(nuovo_messaggio_pc);
+        var context = {
+            text_message: 'ok',
+            class: 'received'
+        }
+
+        console.log(context);
+
+        var html = template(context);
+
+        console.log(html);
+
+        $('.active .m-container').append(html);
+
+        // var nuovo_messaggio_pc = $('.template .message').clone();
+        //
+        // nuovo_messaggio_pc.text('ok');
+        //
+        // $('.active .m-container').append(nuovo_messaggio_pc);
     }
 
     $('#chats .single-chat').click(function() {
