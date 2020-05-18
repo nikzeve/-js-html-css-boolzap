@@ -40,13 +40,31 @@ $(document).ready(function() {
 
         if (nuovo_messaggio.trim() != '') {
 
-            var new_text = $('.template .message').clone();
+            // var new_text = $('.template .message').clone();
+            //
+            // new_text.addClass('sent');
+            //
+            // new_text.text(nuovo_messaggio);
+            //
+            // $('.active .m-container').append(new_text);
+            //
+            // $('#new_message').val('');
 
-            new_text.addClass('sent');
+            var source = $("#entry-template").html();
 
-            new_text.text(nuovo_messaggio);
+            var template = Handlebars.compile(source);
 
-            $('.active .m-container').append(new_text);
+            var context = {
+                text_message: nuovo_messaggio
+            }
+
+            console.log(context);
+
+            var html = template(context);
+
+            console.log(html);
+
+            $('.active .m-container').append(html);
 
             $('#new_message').val('');
 

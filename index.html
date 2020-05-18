@@ -3,8 +3,10 @@
     <head>
         <script src="https://kit.fontawesome.com/ce28035c26.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+
         <title>Boolzap</title>
     </head>
     <body>
@@ -500,15 +502,18 @@
             </div>
         </div>
 
+
+    <script id="entry-template" type="text/x-handlebars-template">
         <div class="template">
             <div class="message">
-
+                <p>{{text_message}}</p>
                 <span><i class="fas fa-chevron-down delete-icon"></i></span>
                 <div class="time-message">
                     <p>00:00</p>
                 </div>
             </div>
         </div>
+    </script>
 
     <script src="main.js" charset="utf-8"></script>
     </body>
